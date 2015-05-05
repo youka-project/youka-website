@@ -1,0 +1,239 @@
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+@white: #fff;
+@main: #72e0b3;
+
+
+html, body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  position: relative;
+}
+
+.col-1-3 {
+  width: 33%;
+  display: inline-block;
+  float: left;
+}
+
+.center {
+  height: 100%;
+  width: 100%;
+  display: table;
+
+  .center-inner {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+#header {
+  position: absolute;
+  width: 100%;
+  height: 88px;
+  box-sizing: border-box;
+  padding: 24px 36px;
+
+  .logo {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  nav {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 24px;
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      list-style: none;
+      display: inline-block;
+      text-transform: uppercase;
+      padding: 0 12px;
+      a {
+        color: @white;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+    }
+  }
+}
+
+#home {
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/bg_header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  color: @white;
+
+  .title {
+    padding: 0 18%;
+    > span {
+      font-family: "Times New Roman", Times, serif;
+      font-style: italic;
+      font-size: 34px;
+    }
+    h1 {
+      margin: 0;
+    }
+    h2 {
+      margin: 0;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 20px;
+    }
+  }
+}
+
+#product {
+  height: 500px;
+  background-color: @white;
+  border-top: 12px solid @main;
+}
+
+#application {
+  height: 856px;
+  background-image: url(../img/bg_iphone.jpg);
+}
+
+#likes {
+
+}
+
+#footer {
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+@import "helpers.less";
+@import "print.less";
